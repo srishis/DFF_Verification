@@ -4,7 +4,6 @@ class dff_cov;
 	dff_transaction tx;
 	
 	function new();
-		tx 	= new;
 		dff_cg  = new();
 	endfunction
 	
@@ -16,7 +15,7 @@ class dff_cov;
 	task run();
 		forever begin
 		dff_cfg::mon2cov.get(tx);		// get the transaction from monitor class
-		dff_cg.sample();				// use coverage in built sample() method to sample the transaction for coverage
+		dff_cg.sample();			// use coverage in built sample() method to sample the transaction for coverage
 		end
 	endtask
 
