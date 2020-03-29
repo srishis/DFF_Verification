@@ -13,8 +13,6 @@ class dff_driver;
 	
 	task run();
 		forever begin
-		// always create a new transaction object for each transaction to avoid conflicts
-		tx = new;		// transaction class object created
 		// get transactions from generator class using gen2drv mailbox get() method
 		dff_cfg::gen2drv.get(tx);
 		// drive transactions to DUT
