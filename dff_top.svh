@@ -9,5 +9,6 @@
 `include "dff_coverage.sv"
 `include "dff_env.sv"
 `include "dff_testbench.sv"
+`include "dff_assertions.sv"
 `include "dff.sv"
 `include "dff_tb_top.sv"
