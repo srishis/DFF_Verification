@@ -7,6 +7,7 @@ program dff_tb;
 	initial begin
 		env = new();
 		env.run();
+		env.report();
 	end
 
 
