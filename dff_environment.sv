@@ -18,7 +18,7 @@ class dff_env;
 		rm  =   new();
 	endfunction
 
-	// call all run methods of each call in fork-join_none
+	// call all run methods of each call in parallel using fork-join_none
 	task run();
 		fork
 		gen.run();
