@@ -13,6 +13,6 @@ class dff_cfg;
   static int error_count;
   
   // Number of transactions
-  static int num_trans;
+  //static int num_trans;
 
 endclass
