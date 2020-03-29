@@ -4,7 +4,7 @@ class dff_cov;
 	dff_transaction tx;
 	
 	function new();
-		tx 		= new;
+		tx 	= new;
 		dff_cg  = new();
 	endfunction
 	
