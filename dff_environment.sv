@@ -24,7 +24,9 @@ class dff_env;
 		mon.run();
 		cov.run();
 		sb.run();
+		//report();
 		join_none
 	endtask
 
+	
 endclass
