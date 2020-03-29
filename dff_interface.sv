@@ -5,7 +5,7 @@ interface dff_if(input logic clk, rst);
  logic d;
 
 //modport for monitor
-modport IN_MON (input clk, rst, d, q, qbar);
+modport MON (input clk, rst, d, q, qbar);
 // modport OUT_MON (input qbar, q);
 
 // Design modport
