@@ -1,12 +1,12 @@
-interface dff_if(input logic clk,rst);
+interface dff_if(input logic clk, rst);
 
  logic q;
  logic qbar;
  logic d;
 
 //modport for monitor
-modport IN_MON (input clk, rst, d);
-modport OUT_MON (input qbar, q);
+modport IN_MON (input clk, rst, d, q, qbar);
+// modport OUT_MON (input qbar, q);
 
 // Design modport
 modport DUT (input d, clk, rst,output qbar, q);
