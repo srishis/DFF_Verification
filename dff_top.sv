@@ -31,8 +31,8 @@ module dff_top;
 	// DFF Testbench instantiation
 	dff_tb TB ();
 	
-	// DFF assertion instantiation
-	dff_assertions DA (pif);
+	// DFF assertion binding to DFF design and instantiation
+	bind dff dff_assertions DA (pif);
 	
 	// hook up design and Testbench using physical interface handle pif to virtual interface handle
 	initial begin
