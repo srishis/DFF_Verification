@@ -4,7 +4,9 @@ class dff_driver;
 	dff_transaction tx;
 	// As driver interacts with the interface it needs a virtual interface handle!
 	virtual dff_if.DRIVER vif;
-		
+	
+	int num_trans = 0;
+	
 	function new();
 		this.vif = dff_cfg::vif;	// pass interface from top to each class which needs it as virtual interface handle
 	endfunction
@@ -17,6 +19,7 @@ class dff_driver;
 		dff_cfg::gen2drv.get(tx);
 		// drive transactions to DUT
 		drive_trans(tx);
+		num_trans++;
 	end
 	endtask
 	
