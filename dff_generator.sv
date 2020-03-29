@@ -2,8 +2,9 @@ class dff_generator;
 
 	dff_transaction tx;
 	dff_transaction txQ[$];
+	int num_trans = 0;
 
-task run();
+	task run();
 	// test cases for design
 	// simple test for DFF with 10 random transactions
 	repeat(10) begin
@@ -14,7 +15,8 @@ task run();
 	// mailbox for inter communication between classes
 	dff_cfg::gen2drv.put(tx); 	// send transaction to Driver to drive it to the DUT using mailbox put() method
 	dff_cfg::gen2ref.put(tx); 	// send transaction to reference model for generating expected values using mailbox put() method
-end
+	num_trans++;
+	end
 endtask
 
 endclass
