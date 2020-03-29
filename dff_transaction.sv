@@ -4,7 +4,7 @@ rand bit d;
 bit qbar, q;
 
 function void copy(output dff_transaction tx);
-	tx 		= new();
+	tx 	= new();
 	tx.d    = this.d;
 	tx.qbar = this.qbar;
 	tx.q 	= this.q;
