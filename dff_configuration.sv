@@ -9,5 +9,7 @@ class dff_cfg;
   
   // create virtual interface handle to pass to all classes from top
   static virtual dff_if vif;
+  
+  static int error_count;
 
 endclass
