@@ -24,9 +24,14 @@ class dff_env;
 		mon.run();
 		cov.run();
 		sb.run();
-		//report();
 		join_none
 	endtask
 
+	task report();
+		if(dff_cfg::error_count == 0)
+			$display("Test failed with errors = %d", dff_cfg::error_count);
+		else
+			$display("TEST PASS");		
+	endtask
 	
 endclass
