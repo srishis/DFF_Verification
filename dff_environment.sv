@@ -31,7 +31,9 @@ class dff_env;
 	endtask
 
 	task report();
-		if((dff_cfg::error_count != 0) && (gen.num_trans != sb.num_trans)) 	//also check for Number of transactions Mismatch
+		// errors should be zero for test pass
+		//also check for Number of transactions generated and processed match
+		if((dff_cfg::error_count != 0) && (gen.num_trans != sb.num_trans)) 	
 			$display("Test failed with errors = %d", dff_cfg::error_count);
 		else
 			$display("TEST PASS: DFF Works as expected!!!");
