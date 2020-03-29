@@ -20,7 +20,7 @@ class dff_sb;
       else if((tx.d == 1) && (tx1.d == 1))
         //if((tx.q !== tx1.q) && (tx.qbar !== tx1.qbar)) begin
          if(!tx1.compare(tx)) begin
-          $display("ERROR:DFF_SCOREBOARD: Mismatch found when d is equal to 1 :: Expected Data = %0p, Actual value = %0p");
+          $display("ERROR:DFF_SCOREBOARD: Mismatch found when d is equal to 1 :: Expected Data = %0p, Actual value = %0p", tx, tx1);
           dff_cfg::error_count++;
         end
       num_trans++;
