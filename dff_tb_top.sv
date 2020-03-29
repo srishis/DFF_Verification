@@ -1,3 +1,4 @@
+`include "dff_top.svh"
 module dff_tb_top;
 	
 	parameter CLK_PERIOD 	 = 5;
