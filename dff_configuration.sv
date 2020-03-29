@@ -11,5 +11,8 @@ class dff_cfg;
   static virtual dff_if vif;
   
   static int error_count;
+  
+  // Number of transactions
+  static int num_trans;
 
 endclass
