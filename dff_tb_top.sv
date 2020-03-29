@@ -1,4 +1,4 @@
-module dff_top;
+module dff_tb_top;
 	
 	parameter CLK_PERIOD 	 = 5;
 	parameter GLOBAL_TIMEOUT = 1000;
