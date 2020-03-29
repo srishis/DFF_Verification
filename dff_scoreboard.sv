@@ -2,7 +2,7 @@
 class dff_sb;
   
   //used to count the number of transactions
-  static int num_trans;
+  int num_trans;
   
   dff_transaction  tx, tx1;
   
