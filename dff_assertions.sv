@@ -1,4 +1,4 @@
-module dff_assertion(dff_if dif);
+module dff_assertions(dff_if dif);
 
 // reset check
 property check_reset_p;
