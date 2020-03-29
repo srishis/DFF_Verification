@@ -1,7 +1,7 @@
 // Order matters here so include in order of compilation dependencies
 
 `include "dff_transaction.sv"
-`include "dff_if.sv"
+`include "dff_interface.sv"
 `include "dff_configuration.sv"
 `include "dff_generator.sv"
 `include "dff_driver.sv"
