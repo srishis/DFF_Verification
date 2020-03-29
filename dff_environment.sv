@@ -6,6 +6,7 @@ class dff_env;
 	dff_monitor mon;
 	dff_coverage cov;
 	dff_scoreboard sb;
+	dff_ref_model rm;
 	
 	// create object for all classes
 	function new();
@@ -14,6 +15,7 @@ class dff_env;
 		mon =	new();
 		cov =	new();
 		sb  =	new();
+		rm  =   new();
 	endfunction
 
 	// call all run methods of each call in fork-join_none
@@ -24,6 +26,7 @@ class dff_env;
 		mon.run();
 		cov.run();
 		sb.run();
+		rm.run();
 		join_none
 	endtask
 
@@ -31,7 +34,7 @@ class dff_env;
 		if(dff_cfg::error_count == 0)
 			$display("Test failed with errors = %d", dff_cfg::error_count);
 		else
-			$display("TEST PASS");		
+			$display("TEST PASS: DFF Works as expected!!!");		
 	endtask
 	
 endclass
