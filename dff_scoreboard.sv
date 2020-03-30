@@ -14,13 +14,13 @@ class dff_sb;
       if((tx.d == 0) && (tx1.d == 0))
         //if((tx.q !== tx1.q) && (tx.qbar !== tx1.qbar)) begin
         if(!tx1.compare(tx)) begin
-          $display("ERROR:DFF_SCOREBOARD: Mismatch found when d is equal to 0 :: Expected data = %0p, Actual data = %0p", tx, tx1);
+          $display("ERROR:DFF_SCOREBOARD: Mismatch found when d is equal to 0 :: Expected data = %0p, Actual data = %0p", tx1, tx);
           dff_cfg::error_count++;
         end
       else if((tx.d == 1) && (tx1.d == 1))
         //if((tx.q !== tx1.q) && (tx.qbar !== tx1.qbar)) begin
          if(!tx1.compare(tx)) begin
-           $display("ERROR:DFF_SCOREBOARD: Mismatch found when d is equal to 1 :: Expected data = %0p, Actual data = %0p", tx, tx1);
+           $display("ERROR:DFF_SCOREBOARD: Mismatch found when d is equal to 1 :: Expected data = %0p, Actual data = %0p", tx1, tx);
           dff_cfg::error_count++;
         end
       num_trans++;
