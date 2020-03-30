@@ -3,6 +3,14 @@ class dff_transaction;
 rand bit d;
 bit qbar, q;
 
+function void print();
+	$display("-----PRINTING TRANSACTION CLASS PROPERTIES---------");
+	$display("\t D = %b", tx.d);
+	$display("\t Q = %b", tx.q);
+	$display("\t QBar = %b", tx.qbar);
+	$display("---------------------------------------------------");
+endfunction
+	
 function void copy(output dff_transaction tx);
 	tx 	= new();
 	tx.d    = this.d;
